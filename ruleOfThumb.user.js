@@ -9,10 +9,7 @@
 // ==/UserScript==
 
 $(function(){
-    var dBody,
-        myStyle;
-    
-    myStyle = ' \
+    var myStyle = ' \
 #thumbTrigger { \
 bottom: 0; \
 left: 0; \
@@ -90,7 +87,7 @@ padding: 5px; \
         var searchBox = $('<form id="thumb-search" action="http://search.yahoo.com/mobile/s?">' +
                           '<input type="text" class="thumb-input" name="q" value="" placeholder="input search here"/>' +
                           '</form>');
-        var urlBox = $('<form id="thumb-go" action="http://search.yahoo.com/mobile/s?">' +
+        var urlBox = $('<form id="thumb-go" action="?">' +
                        '<input type="text" class="thumb-input" name="q" value="http://" />' +
                        '</form>');
         
@@ -117,8 +114,7 @@ padding: 5px; \
     
     
     var setupTrigger = function() {
-        var dTrigger, dBack, dForward, dSearch, dGo;
-        dTrigger = $('<div id="thumbTrigger"><div class="trigger close">'+
+        var dTrigger= $('<div id="thumbTrigger"><div class="trigger close">'+
                      '<span class="btns back">B</span>' +
                      '<span class="btns forward">F</span>' +
                      '<span class="btns srch">S</span>' +
